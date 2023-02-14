@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Parlor</title>
+    <script src = "pizza.js"></script>
+  </head>
+  <body>
+    <div id = "wrapper">
+      <section>
+        <h1>Build your Pizza</h1>
+        <form id = "pizzaForm" action = "review.html">
+          <input
+            id = "cost-estimate"
+            name = "cost-estimate"
+            type = "hidden"
+          /> <!--Size list for pizza and error for no choice input-->
+          <section>
+            <div>
+            <h2>Crust Type</h2>
+            <div>
+              <label class = "pizza-crust">
+                <input type = "radio" id = "Small" name = "crust-option">
+                <span class="crust">Thin Crust ($5.00)</span>
+              </label><br>
+              <label class = "pizza-crust">
+                <input type = "radio" id = "Medium" name = "crust-option">
+                <span class="crust">Rising Crust ($8.00)</span>
+              </label><br>
+              <label class = "pizza-crust">
+                <input type = "radio" id = "Large" name = "crust-option">
+                <span class="crust">Deep Dish ($11.00)</span>
+              </label>
+            </div>
+          </div>
+          <!--List for toppings-->
+          <section>
+            <div>
+              <h2>Toppings ($0.50 each)</h2>
+              <h2>Meats</h2>
+              <label>
+                <input 
+                  type = "checkbox" 
+                  name = "topping"
+                  value = "Pepperoni">
+                <span>Pepperoni</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Sausage">
+                <span>Sausage</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Chicken">
+                <span>Chicken</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Ham">
+                <span>Ham</span>
+              </label>
+              <h2>Veggies</h2>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Banana Peppers">
+                <span>Banana Peppers</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Mushrooms">
+                <span>Mushrooms</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Black Olives">
+                <span>Black Olives</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Green Peppers">
+                <span>Green Peppers</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Pineapple">
+                <span>Pineapple</span>
+              </label><br>
+              <label>
+                <input 
+                  type = "checkbox"
+                  name = "topping"
+                  value = "Onions">
+                <span>Onions</span>
+              </label>
+            </div>
+        </section>
+        <section>
+          <h2>Payment</h2>
+          <select name = "payment">
+            <option value = "">---Choose a Payment Method---</option>
+            <option value = "cash" id = "cash">Cash</option>
+            <option value = "card" id = "card">Credit Card</option>
+            <option value = "paypal" id = "paypal">Paypal</option>
+          </select>
+        </section>
+        <input type = "button" value = "Submit" onclick = "crustChoice()">
+        </form>
+      </section>
+    </div>
+    <br />
+    <br />
+    <br />
+    <footer>
+      Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Use
+      <br /><br />
+      2023 CISIWEB PIZZA
+    </footer>
+  </body>
+
+  </body>
+</html>
+<!--
+    Checklist for content
+      -Title/ h1
+      -Default Large Pizza 
+        (optional: add small, medium, large)
+      -Toppings selection (4 meat, 6 vegetable)
+      -Crust type (3)
+      -Payment Method (cash, credit card, paypal)-->

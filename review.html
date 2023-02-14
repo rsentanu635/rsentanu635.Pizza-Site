@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Parlor</title>
+    <script src = "pizza.js"></script>
+  <body>
+    <div id = "wrapper">
+        <section>
+            <h1>Please review your order</h1>
+            <p id = "message"></p>
+            <script>
+                const priceFinal = localStorage.getItem("price");
+                const crustFinal = localStorage.getItem("crust");
+                const payment = localStorage.getItem("pay");
+                const toppingsFinal0 = localStorage.getItem("toppings0");
+				const toppingsFinal1 = localStorage.getItem("toppings1");
+				const toppingsFinal2 = localStorage.getItem("toppings2");
+				const toppingsFinal3 = localStorage.getItem("toppings3");
+				const toppingsFinal4 = localStorage.getItem("toppings4");
+				const toppingsFinal5 = localStorage.getItem("toppings5");
+				const toppingsFinal6 = localStorage.getItem("toppings6");
+				const toppingsFinal7 = localStorage.getItem("toppings7");
+				const toppingsFinal8 = localStorage.getItem("toppings8");
+				const toppingsFinal9 = localStorage.getItem("toppings9");
+				const toppingsArray = [];
+				
+				if(toppingsFinal0 == "Pepperoni"){
+					toppingsArray.push(toppingsFinal0);
+				}
+				if(toppingsFinal1 == "Sausage"){
+					toppingsArray.push(toppingsFinal1);
+				}
+				if(toppingsFinal2 == "Chicken"){
+					toppingsArray.push(toppingsFinal2);
+				}
+				if(toppingsFinal3 == "Ham"){
+					toppingsArray.push(toppingsFinal3);
+				}
+				if(toppingsFinal4 == "Banana Peppers"){
+					toppingsArray.push(toppingsFinal4);
+				}
+				if(toppingsFinal5 == "Mushrooms"){
+					toppingsArray.push(toppingsFinal5);
+				}
+				if(toppingsFinal6 == "Black Olives"){
+					toppingsArray.push(toppingsFinal6);
+				}
+				if(toppingsFinal7 == "Green Peppers"){
+					toppingsArray.push(toppingsFinal7);
+				}
+				if(toppingsFinal8 == "Pineapple"){
+					toppingsArray.push(toppingsFinal8);
+				}
+				if(toppingsFinal9 == "Onions"){
+					toppingsArray.push(toppingsFinal9);
+				}
+				alert(toppingsArray);
+                alert("The final price is: " + priceFinal);
+                alert("The crust type is: " + crustFinal);
+                alert("The payment type is: " + payment);
+                localStorage.clear();
+                document.getElementById("message").innerHTML = 
+                "Your order of " + crustFinal + " with " + toppingsArray + 
+                " comes down to a total of $" + priceFinal + " using a payment of " + payment;
+            </script>
+        </section>  
+    </div>
+    <footer>
+        Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Use
+        <br /><br />
+        2023 CISIWEB PIZZA
+      </footer>
+  </body>
